@@ -18,6 +18,15 @@ namespace prog7311.Controllers
         public ActionResult Index()
         {
             var users = db.Users.Include(u => u.Cart);
+            if (login.ToList().Count > 0) //username and password is correct
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                ViewBag.Error = "Incorrect Username or Password";
+                return View("Login");
+            }
             return View(users.ToList());
         }
 

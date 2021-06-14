@@ -2,7 +2,8 @@
 create table Items(
 itemID int IDENTITY(1,1) not null PRIMARY KEY,
 item varchar(25),
-category varchar(30)
+category varchar(30),
+quantity int
 );
 
 create table Carts(
@@ -18,6 +19,11 @@ userRole varchar(25),
 userPassword varchar(10)
 );
 
+insert into Items
+([item],[category]) values ('Milk','Groceries'),('Samsung S35','Technology');
+
+insert into Users 
+values('Link','admin','Jeffeffe');
 
 
 

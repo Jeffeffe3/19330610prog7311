@@ -7,9 +7,13 @@ namespace prog7311.Models
 {
     public partial class Employee
     {
-        public int ItemID { get; set; }
+        public Item ItemID { get; set; }
 
         public int  quantity { get; set; }
+
+        public Item category { get; set; }
+
+
 
         public DateTime time { get; set; }
 
